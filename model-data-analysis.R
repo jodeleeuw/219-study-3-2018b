@@ -34,3 +34,6 @@ ggplot(error.data, aes(x=reorder(target,-model.error), y=model.error))+
   labs(x="Musical Excerpt", y="Model Error")+
   theme_minimal()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+model.error <- sum(error.data$model.error)
+
