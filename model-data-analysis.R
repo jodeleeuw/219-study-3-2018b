@@ -23,6 +23,8 @@ error.data <- summary.data %>%
   group_by(target) %>%
   summarize(model.error = mean(error))
 
+error.data$music.type <- c("icon1", "icon2", "icon2", "icon2", "index", "icon1", "icon2", "index", "index", "index", "icon1", "index", "icon1", "index", "icon1", "icon2", "icon2", "icon1", "index", "icon1", "index", "icon2", "icon2", "icon1", "icon2", "index", "index", "icon2")
+
 ggplot(summary.data, aes(x=choice, y=probability, color=source))+
   geom_point()+
   facet_wrap(~target)+
@@ -36,4 +38,6 @@ ggplot(error.data, aes(x=reorder(target,-model.error), y=model.error))+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 model.error <- sum(error.data$model.error)
+
+error.data %>% group_by(music.type) %>% summarize(error = sum(model.error))
 
