@@ -21,7 +21,7 @@ error.data <- summary.data %>%
   spread("source", "probability") %>%
   mutate(error = (human-model)^2) %>%
   group_by(target) %>%
-  summarize(model.error = mean(error))
+  summarize(model.error = sqrt(mean(error)))
 
 error.data$music.type <- c("icon1", "icon2", "icon2", "icon2", "index", "icon1", "icon2", "index", "index", "index", "icon1", "index", "icon1", "index", "icon1", "icon2", "icon2", "icon1", "index", "icon1", "index", "icon2", "icon2", "icon1", "icon2", "index", "index", "icon2")
 
@@ -29,13 +29,14 @@ ggplot(summary.data, aes(x=choice, y=probability, color=source))+
   geom_point()+
   facet_wrap(~target)+
   theme_minimal()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
 
-ggplot(error.data, aes(x=reorder(target,-model.error), y=model.error))+
+ggplot(error.data, aes(x=reorder(target,-model.error), y=model.error, fill=music.type))+
   geom_bar(stat='identity')+
+  scale_fill_brewer(type="qual", palette = "Set1")+
   labs(x="Musical Excerpt", y="Model Error")+
   theme_minimal()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.25))
 
 model.error <- sum(error.data$model.error)
 
