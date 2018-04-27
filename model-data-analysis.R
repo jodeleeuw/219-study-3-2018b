@@ -3,8 +3,6 @@ library(tidyr)
 library(purrr)
 library(ggplot2)
 
-# remove buzzsaw, musical clock
-
 targets <- data.result %>% 
   map(function(x){
     df <- data.frame(target=x$target, choice=x$options) %>% 

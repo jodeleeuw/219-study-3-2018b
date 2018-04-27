@@ -7,6 +7,7 @@ trial.data <- read_csv2('data/raw_data_semicolon.csv')
 
 data <- trial.data %>% 
   filter(trial_type == "survey-multi-select") %>%
+  filter(!stimulus %in% c("Musical Clock", "Buzzsaw")) %>%
   select(stimulus, options, responses)
 
 trials <- vector("list", nrow(data))
