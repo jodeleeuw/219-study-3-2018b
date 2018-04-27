@@ -1,0 +1,46 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r message=FALSE, warning=FALSE}
+library(readr)
+library(dplyr)
+library(stringr)
+all.data <- read_csv('music-features-processed.csv')
+```
+
+## Table of means and sds
+```{r}
+summary.data <- all.data %>% 
+  filter(measure!='instruments', !is.na(value)) %>% 
+  group_by(music, measure) %>%
+  summarize(mean=mean(as.numeric(value)), sd=sd(as.numeric(value)))
+summary.data
+```
+
+## Frequency counts of instruments
+
+```{r}
+instrument.data <- all.data %>%
+  filter(measure=='instruments', !is.na(value)) %>%
+  group_by(music) %>%
+  summarize(all.responses = tolower(paste(value, sep=", ", collapse = ", ")))
+
+all.instruments <- unique(sapply(strsplit(paste(instrument.data$all.responses, collapse = ", "), split=","), str_trim))
+
+music.instrument.frequency <- expand.grid(instrument=all.instruments, piece=instrument.data$music)
+music.instrument.frequency$freq <- mapply(function(instrument, piece){
+  freq = sum(instrument == (instrument.data %>% filter(music==piece))$all.responses %>%
+                      str_split(pattern=",") %>%
+                      unlist() %>%
+                      str_trim())
+  return(freq)
+}, music.instrument.frequency$instrument, music.instrument.frequency$piece) 
+music.instrument.frequency <- music.instrument.frequency %>%
+  filter(freq > 0) %>% select(piece, instrument, freq)
+
+write.csv(music.instrument.frequency, "instrument-frequency.csv", row.names = F)
+
+music.instrument.frequency
+```

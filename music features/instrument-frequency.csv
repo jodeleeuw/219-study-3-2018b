@@ -1,0 +1,237 @@
+"piece","instrument","freq"
+"arrival","horns",1
+"arrival","brass",2
+"arrival","drums",5
+"arrival","trumpets",5
+"arrival","trumpet",5
+"arrival","bass drum",1
+"arrival","horn",2
+"arrival","drum",1
+"basement","brass",1
+"basement","horn",2
+"basement","woodwind",1
+"basement","clarinet",1
+"basement","bassoon",1
+"basement","saxophone",1
+"basement","wind instrument",1
+"basement","tuba",1
+"basement","oboe",1
+"basement","woodwinds",1
+"basement","basoon",1
+"basement","bass clarinet",1
+"bird","brass",1
+"bird","drums",1
+"bird","drum",1
+"bird","woodwind",1
+"bird","flute",11
+"bird","strings",2
+"bird","violin",3
+"bird","percussion",1
+"blossom","flute",11
+"blossom","harp",7
+"blossom","bassons",1
+"blossom","guitar",1
+"blue","bass drum",1
+"blue","flute",1
+"blue","strings",4
+"blue","violin",5
+"blue","percussion",1
+"blue","harp",2
+"blue","choir",2
+"blue","piano",1
+"blue","chorus",2
+"blue","low brass",1
+"blue","tubas",1
+"blue","voice",2
+"celebration","brass",1
+"celebration","woodwind",1
+"celebration","strings",4
+"celebration","violin",7
+"celebration","percussion",1
+"celebration","whistle",2
+"celebration","bagpipes",2
+"celebration","bagpipe",1
+"circle","strings",3
+"circle","violin",9
+"circle","harp",1
+"circle","bass",2
+"circle","cello",2
+"circle","viola",2
+"circle","various strings",1
+"circle","a cello?",1
+"cradle","piano",13
+"departure","clarinet",1
+"departure","oboe",2
+"departure","strings",4
+"departure","violin",8
+"devotion","horns",2
+"devotion","brass",4
+"devotion","trumpets",2
+"devotion","trumpet",6
+"devotion","horn",2
+"devotion","trombone",3
+"devotion","french horn",2
+"fight","horns",3
+"fight","brass",3
+"fight","drums",7
+"fight","trumpet",1
+"fight","horn",2
+"fight","drum",1
+"fight","flute",1
+"fight","strings",1
+"fight","percussion",3
+"fight","bass",1
+"fight","trombone",1
+"fight","french horn",1
+"fight","symbols",1
+"fight","wooden glockenspiel",1
+"fight","orchestra",1
+"fight","violins",1
+"fight","cymbals",1
+"hero","horns",2
+"hero","brass",2
+"hero","trumpets",2
+"hero","trumpet",2
+"hero","bass drum",1
+"hero","horn",1
+"hero","clarinet",1
+"hero","strings",3
+"hero","violin",6
+"hero","percussion",3
+"hero","orchestra",2
+"hero","violins",1
+"hero","flutes",1
+"hero","violas",1
+"jungle","drums",9
+"jungle","percussion",3
+"jungle","xylophone",4
+"jungle","xylorimba",1
+"jungle","bell",1
+"jungle","wooden ratchet?",1
+"jungle","jembe",1
+"jungle","marimba",1
+"jungle","claves",1
+"mischief","brass",1
+"mischief","drums",7
+"mischief","bass drum",1
+"mischief","drum",1
+"mischief","strings",4
+"mischief","violin",5
+"mischief","percussion",1
+"mischief","viola",1
+"mischief","violins",1
+"mischief","timpani",1
+"mockery","horns",2
+"mockery","brass",2
+"mockery","trumpet",1
+"mockery","woodwind",2
+"mockery","saxophone",7
+"mockery","saxaphone",1
+"narrowness","horns",1
+"narrowness","bass clarinet",1
+"narrowness","accordian",2
+"narrowness","accordion",5
+"narrowness","harmonica",1
+"narrowness","don't know",1
+"needle","drum",2
+"needle","strings",4
+"needle","violin",7
+"needle","cello",2
+"needle","contrabass",1
+"needle","piccolo",1
+"ocean","trumpet",1
+"ocean","woodwind",1
+"ocean","oboe",1
+"ocean","flute",2
+"ocean","strings",2
+"ocean","violin",3
+"ocean","percussion",2
+"ocean","low brass",1
+"ocean","metal glockenspiel",1
+"ocean","bells/triangle",1
+"ocean","wooden blocks",1
+"peaceful","woodwind",1
+"peaceful","flute",12
+"peaceful","strings",2
+"peaceful","violin",1
+"peaceful","harp",2
+"peaceful","guitar",1
+"peaceful","contrabass",1
+"peaceful","piccolo",2
+"quarrel","strings",4
+"quarrel","violin",9
+"quarrel","cello",2
+"red","horns",1
+"red","brass",1
+"red","drums",4
+"red","trumpet",4
+"red","bass drum",1
+"red","drum",1
+"red","saxophone",1
+"red","flute",1
+"red","strings",2
+"red","violin",4
+"red","percussion",3
+"red","cello",1
+"red","viola",1
+"red","orchestra",1
+"red","timpani",1
+"red","piccolo",2
+"red","base drum",1
+"river","piano",11
+"river","keyboard",1
+"river","synthetic piano",1
+"rushed","horns",2
+"rushed","brass",1
+"rushed","trumpets",1
+"rushed","trumpet",6
+"rushed","horn",1
+"rushed","bass clarinet",1
+"rushed","flute",2
+"rushed","strings",4
+"rushed","violin",2
+"rushed","percussion",1
+"rushed","orchestra",1
+"sigh","horns",1
+"sigh","woodwinds",1
+"sigh","flute",1
+"sigh","strings",4
+"sigh","violin",6
+"sigh","viola",1
+"sigh","violins",1
+"staircase","strings",1
+"staircase","piano",11
+"strength","horns",1
+"strength","brass",1
+"strength","drums",6
+"strength","trumpet",3
+"strength","bass drum",1
+"strength","horn",1
+"strength","drum",4
+"strength","woodwind",1
+"strength","flute",1
+"strength","strings",2
+"strength","percussion",2
+"strength","timpani",1
+"strength","triangle",1
+"strength","symbol",1
+"toxin","horns",1
+"toxin","drums",1
+"toxin","horn",1
+"toxin","drum",1
+"toxin","woodwind",1
+"toxin","violin",1
+"toxin","percussion",2
+"toxin","piano",3
+"toxin","violins",1
+"toxin","castanets",1
+"toxin","woodblock",1
+"toxin","wooden block",1
+"toxin","snare",1
+"wideness","horns",1
+"wideness","woodwind",1
+"wideness","woodwinds",1
+"wideness","flute",4
+"wideness","strings",3
+"wideness","violin",5
+"wideness","violins",1
