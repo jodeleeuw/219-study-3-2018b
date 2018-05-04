@@ -33,3 +33,20 @@ ggplot(error.music.type, aes(x=music.type, y=error, ymin=error-se, ymax=error+se
   facet_wrap(~model.type)+
   theme_minimal()
 ```
+
+Looking at musical clips where subjects seemed to respond more specifically
+
+```{r}
+music.clips <- c("jungle", "circle","arrival","celebration", "mockery", "river", "blossom", "staircase", "cradle")
+
+error.specific <- error.data.all %>%
+  filter(target %in% music.clips) %>%
+  group_by(model.group, model.type) %>%
+  summarize(error = mean(model.error), se = sd(model.error) / sqrt(n()))
+
+ggplot(error.specific, aes(x=model.type, y=error, ymin=error-se, ymax=error+se, color=model.group))+
+  geom_pointrange(position=position_dodge(width=0.4))+
+  scale_color_brewer(type="cat", palette="Set1", name="Model")+
+  labs(x="Model Type", y="Average Model Error")+
+  theme_minimal()
+```
