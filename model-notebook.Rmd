@@ -1,0 +1,35 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(ggplot2)
+library(dplyr)
+load('models/results/all.RData')
+```
+
+First, get overall error for each model.
+
+```{r}
+error.summary <- error.data.all %>%
+  group_by(model.group, model.type) %>%
+  summarize(error = sum(model.error))
+
+error.summary
+```
+
+Error results by different music types
+
+```{r}
+error.music.type <- error.data.all %>%
+  group_by(model.group, model.type, music.type) %>%
+  summarize(error = mean(model.error), se = sd(model.error) / sqrt(n()))
+
+ggplot(error.music.type, aes(x=music.type, y=error, ymin=error-se, ymax=error+se, color=model.group))+
+  geom_pointrange(position=position_dodge(width=0.4))+
+  scale_color_brewer(type="cat", palette="Set1", name="Model")+
+  labs(x="Music Excerpt Type", y="Average Model Error")+
+  facet_wrap(~model.type)+
+  theme_minimal()
+```

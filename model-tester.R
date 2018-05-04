@@ -12,4 +12,4 @@ test.model <- function(model.file){
   return(model.run.data)
 }
 
-data.result <- test.model("models/random-model.R")
+data.result <- test.model("models/spike-model.R")
